@@ -1,5 +1,5 @@
 ### Hi there 👋
-
+![Arvind's GitHub stats](https://github-readme-stats.vercel.app/api?username=arvindcj&show_icons=true&theme=transparent)
 <!--
 **arvindcj/arvindcj** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
