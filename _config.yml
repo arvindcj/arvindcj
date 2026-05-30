@@ -1,0 +1,11 @@
+title: AI for Founders & Builders by Arvind Janakiram
+description: Static Jekyll site for Arvind Janakiram
+url: ""
+baseurl: ""
+
+plugins: []
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

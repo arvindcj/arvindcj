@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <head>
+    {% include google-tag-manager.html %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:400|Outfit:400,800,700|Lato:400|Plus Jakarta Sans:600,400&display=swap"
+    >
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body class="{{ page.body_class | default: 'D I J K N V X c' }}">
+    {% include google-tag-manager-noscript.html %}
+    {{ content }}
+  </body>
+</html>
