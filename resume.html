@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arvind Janakiram - Brutalist Resume Template</title>
+  <style>
+    :root {
+      --ink: #0a0a0a;
+      --paper: #f5f0e4;
+      --card: #ffffff;
+      --accent: #e9ff00;
+      --muted: #4f4f4f;
+      --border: 3px solid var(--ink);
+      --thin: 1.5px solid var(--ink);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #d8d8d8;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.18;
+    }
+
+    body { padding: 20px; }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      border: var(--border);
+      box-shadow: 8px 8px 0 var(--ink);
+      padding: 12mm;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1.45fr 0.72fr;
+      gap: 9px;
+      border-bottom: var(--border);
+      padding-bottom: 9px;
+      margin-bottom: 9px;
+    }
+
+    .nameplate, .contact, .section, .callout { border: var(--border); }
+    .nameplate, .section { background: var(--card); }
+
+    .nameplate { padding: 11px 12px; }
+
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      line-height: 0.88;
+      letter-spacing: -2.2px;
+      text-transform: uppercase;
+    }
+
+    .role {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 7px;
+      background: var(--accent);
+      border: var(--thin);
+      font: 700 11px/1.25 "Courier New", Courier, monospace;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 10px 11px;
+      font: 10.2px/1.25 "Courier New", Courier, monospace;
+    }
+
+    .contact div { margin-bottom: 5px; overflow-wrap: anywhere; }
+    .contact strong {
+      display: block;
+      color: var(--accent);
+      font: 900 10px/1 Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 1px;
+    }
+
+    .callout {
+      background: var(--accent);
+      padding: 8px 10px;
+      margin-bottom: 9px;
+      font-size: 15.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.02;
+      letter-spacing: -0.6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.55fr;
+      gap: 9px;
+      align-items: start;
+    }
+
+    .section { margin-bottom: 9px; break-inside: avoid; }
+    .section-title {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 5.5px 8px;
+      font-size: 10.5px;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-bottom: var(--thin);
+    }
+
+    .section-body { padding: 8px 9px; }
+
+    .summary { font-size: 11.6px; margin: 0; line-height: 1.28; }
+
+    .chip-list { display: flex; flex-wrap: wrap; gap: 4.5px; }
+    .chip {
+      border: var(--thin);
+      padding: 3px 5px;
+      font: 10px/1 "Courier New", Courier, monospace;
+      background: var(--paper);
+      white-space: nowrap;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 6px;
+      border-bottom: var(--thin);
+      padding: 6px 0;
+    }
+    .metric-row:first-child { padding-top: 0; }
+    .metric-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .metric { font-size: 17px; font-weight: 900; letter-spacing: -1px; }
+    .metric-copy { font-size: 10.3px; }
+
+    .small-line, .edu-line { font-size: 10.6px; margin: 0 0 5px; }
+    .edu-line:last-child, .small-line:last-child { margin-bottom: 0; }
+
+    .project { border-bottom: var(--thin); padding: 7px 0; break-inside: avoid; }
+    .project:first-child { padding-top: 0; }
+    .project:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .project-title {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      font-size: 12.4px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.3px;
+    }
+    .project-title span:last-child {
+      font: 700 9.5px/1.15 "Courier New", Courier, monospace;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .project-subtitle {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 10.5px;
+      font-weight: 700;
+    }
+
+    ul { margin: 5px 0 0; padding: 0; list-style: none; }
+    li {
+      position: relative;
+      padding-left: 12px;
+      margin: 3.5px 0;
+      font-size: 10.8px;
+      line-height: 1.25;
+    }
+    li::before {
+      content: "■";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 6.5px;
+    }
+
+    .footer-note {
+      margin-top: 6px;
+      border-top: var(--border);
+      padding-top: 6px;
+      font: 8.5px/1.25 "Courier New", Courier, monospace;
+      text-transform: uppercase;
+    }
+
+    @media print {
+      @page { size: A4; margin: 0; }
+      html, body { background: var(--paper); padding: 0; }
+      .page { width: 210mm; min-height: 297mm; margin: 0; border: 0; box-shadow: none; padding: 10mm; }
+    }
+
+    @media screen and (max-width: 900px) {
+      body { padding: 0; }
+      .page { width: 100%; min-height: auto; border: 0; box-shadow: none; padding: 20px; }
+      .topbar, .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <section class="nameplate">
+        <h1>Arvind<br />Janakiram</h1>
+        <div class="role">Technical Writer for Developer Tools & AI Products | API Docs, Auth, Cloud, SaaS Onboarding | Engineer + Product Builder</div>
+      </section>
+      <aside class="contact">
+        <div><strong>Website</strong> www.arvindcj.com</div>
+        <div><strong>Email</strong> hello@arvindcj.com</div>
+        <div><strong>LinkedIn</strong> linkedin.com/in/arvindcj</div>
+        <div><strong>Twitter</strong> x.com/ArvindJanakiram</div>
+        <div><strong>Location</strong> Chennai, India</div>
+      </aside>
+    </header>
+
+    <section class="callout">I turn complex technical products into clear docs, quickstarts, diagrams, and onboarding flows.</section>
+
+    <section class="grid">
+      <aside>
+        <section class="section">
+          <div class="section-title">Core Stack</div>
+          <div class="section-body chip-list">
+            <span class="chip">API Docs</span><span class="chip">Developer Docs</span><span class="chip">Auth</span><span class="chip">JWT</span><span class="chip">Signed URLs</span><span class="chip">OpenAPI</span><span class="chip">Markdown</span><span class="chip">GitHub</span><span class="chip">Cloudflare</span><span class="chip">TypeScript</span><span class="chip">SaaS</span><span class="chip">Visual Docs</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Proof Points</div>
+          <div class="section-body">
+            <div class="metric-row"><div class="metric">01</div><div class="metric-copy">Engineer and product builder with software + consulting background.</div></div>
+            <div class="metric-row"><div class="metric">02</div><div class="metric-copy">Building StaticAuth: auth, payments, protected routes, and gated file access.</div></div>
+            <div class="metric-row"><div class="metric">03</div><div class="metric-copy">Visual explanation angle: diagrams, sketchnotes, comic-style explainers.</div></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Writing Samples</div>
+          <div class="section-body">
+            <p class="small-line"><strong>Quickstart:</strong> Protect a route in 5 minutes</p>
+            <p class="small-line"><strong>Concept:</strong> JWT vs signed URLs</p>
+            <p class="small-line"><strong>Guide:</strong> Payment-gated file access</p>
+            <p class="small-line"><strong>Reference:</strong> REST API + OpenAPI sample</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Education</div>
+          <div class="section-body">
+            <p class="edu-line"><strong>Master of Information Technology (Professional)</strong><br />Deakin University</p>
+            <p class="edu-line"><strong>M.Tech BioPharmaceutical Engineering</strong><br />Anna University</p>
+            <p class="edu-line"><strong>B.Tech Chemical Engineering</strong><br />University of Madras</p>           
+          </div>
+        </section>
+      </aside>
+
+      <section>
+        <section class="section">
+          <div class="section-title">Profile</div>
+          <div class="section-body">
+            <p class="summary">Engineer, product builder, and technical communicator focused on API-first SaaS, auth, cloud infrastructure, and developer tools. I help teams convert complex systems into clear documentation: quickstarts, API guides, integration tutorials, troubleshooting docs, diagrams, and product explainers.</p>
+          </div>
+        </section>
+
+         <section class="section">
+          <div class="section-title">Current Project</div>
+          <div class="section-body">
+            <article class="project">
+              <div class="project-title"><span>Static Auth Documentation System</span><span>Docs</span></div>
+              <ul>
+                <li>Planned quickstarts, API reference, auth guides, payment webhook docs, and troubleshooting flows.</li>
+                <li>Mapped route rules, file protection, user access, custom domains, analytics, and security topics.</li>
+              </ul>
+            </article>
+            <article class="project">
+              <div class="project-title"><span>Visual Technical Explainers</span><span>Comics / Diagrams</span></div>
+              <ul><li>Use diagrams, visual notes, and comic-style panels to explain infrastructure and product concepts.</li></ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Experience</div>
+          <div class="section-body">
+            <article class="project">
+              <div class="project-title"><span>Independent Consultant</span><span>Apr 2012 - Present</span></div>
+              <div class="project-subtitle">ArvindCJ (www.arvindcj.com)</div>
+              <ul>
+                <li>Building a product for protecting static websites, paid downloads, member-only pages, and app routes.</li>
+                <li>Designing docs and onboarding around authentication, authorization, payments, route protection, and signed access.</li>
+                <li>Writing product specs, implementation notes, API concepts, launch posts, and technical explainers.</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <div class="project-title"><span>Founder</span><span>May 2022 - Present</span></div>
+              <div class="project-subtitle">Fossa Technology (www.fossa.technology)</div>
+              <ul>
+                <li>Worked across software systems, product logic, requirements clarification, and technical implementation.</li>
+                <li>Explained technical decisions to business, product, and engineering stakeholders.</li>
+                <li>Translated ambiguous business needs into structured workflows, system behavior, and execution plans.</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <div class="project-title"><span>Tech Yahoo</span><span>Apr 2008 - Apr 2012</span></div>
+              <div class="project-subtitle">Yahoo! R&D</div>
+              <ul>
+                <li>Created educational material around AI-assisted product building, systems thinking, and software design.</li>
+                <li>Developed visual and written explanations for non-technical founders learning product execution with AI.</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <div class="project-title"><span>Software Tester</span><span>Mar 2007 - Apr 2008</span></div>
+              <div class="project-subtitle">Electronnic Arts</div>
+              <ul>
+                <li>Created educational material around AI-assisted product building, systems thinking, and software design.</li>
+                <li>Developed visual and written explanations for non-technical founders learning product execution with AI.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+         <section class="section">
+          <div class="section-title">Permanent Jobs Experiences</div>
+          <div class="section-body">
+            <article class="project">
+              <div class="project-title"><span>Founder / Product Builder - StaticAuth</span><span>2026 - Present</span></div>
+              <div class="project-subtitle">Fossa Technology - Developer infrastructure / access control</div>
+              <ul>
+                <li>Building a product for protecting static websites, paid downloads, member-only pages, and app routes.</li>
+                <li>Designing docs and onboarding around authentication, authorization, payments, route protection, and signed access.</li>
+                <li>Writing product specs, implementation notes, API concepts, launch posts, and technical explainers.</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <div class="project-title"><span>Software Engineer / Technology Consultant</span><span>Past Roles</span></div>
+              <div class="project-subtitle">Engineering, consulting, product delivery</div>
+              <ul>
+                <li>Worked across software systems, product logic, requirements clarification, and technical implementation.</li>
+                <li>Explained technical decisions to business, product, and engineering stakeholders.</li>
+                <li>Translated ambiguous business needs into structured workflows, system behavior, and execution plans.</li>
+              </ul>
+            </article>
+
+            <article class="project">
+              <div class="project-title"><span>AI Product Education / Prompt Fluidity</span><span>2025 - Present</span></div>
+              <div class="project-subtitle">AI-assisted product development and founder education</div>
+              <ul>
+                <li>Created educational material around AI-assisted product building, systems thinking, and software design.</li>
+                <li>Developed visual and written explanations for non-technical founders learning product execution with AI.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Selected Projects</div>
+          <div class="section-body">
+            <article class="project">
+              <div class="project-title"><span>StaticAuth Documentation System</span><span>Docs</span></div>
+              <ul>
+                <li>Planned quickstarts, API reference, auth guides, payment webhook docs, and troubleshooting flows.</li>
+                <li>Mapped route rules, file protection, user access, custom domains, analytics, and security topics.</li>
+              </ul>
+            </article>
+            <article class="project">
+              <div class="project-title"><span>Visual Technical Explainers</span><span>Comics / Diagrams</span></div>
+              <ul><li>Use diagrams, visual notes, and comic-style panels to explain infrastructure and product concepts.</li></ul>
+            </article>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <footer class="footer-note">Template note: Replace sample copy with role-specific metrics. Keep PDF for applications and HTML for arvindcj.com/resume.</footer>
+  </main>
+</body>
+</html>
