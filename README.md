@@ -1,43 +1,28 @@
-# Arvind CJ Jekyll Site
+# Arvind Janakiram
 
-Static Jekyll site for the AI for Founders & Builders landing page.
+Technical Writer for API, Auth, Cloud & Developer Tools
+Engineer · Product Builder · Visual Technical Communicator
 
-## Setup
+I turn complex technical products into clear docs, quickstarts, diagrams, tutorials, and onboarding flows.
 
-```sh
-bundle install
-```
+Currently building StaticAuth — access infrastructure for static products: protected routes, paid downloads, auth, payments, and gated files.
 
-## Development
+## What I Work On
+- API documentation
+- Developer documentation
+- Authentication and authorization
+- Cloud / serverless infrastructure
+- SaaS onboarding
+- AI-assisted product development
+- Visual explainers, diagrams, and sketchnotes
 
-```sh
-bundle exec jekyll serve --livereload
-```
+## What I’m Looking For
 
-The site will be available at `http://127.0.0.1:4000/`.
+I’m interested in technical writing, documentation engineering, and developer education work for:
 
-## Build
-
-```sh
-bundle exec jekyll build
-```
-
-The generated site is written to `_site/`.
-
-## Theme Structure
-
-- `_layouts/default.html` contains the shared HTML shell.
-- `_includes/` contains reusable snippets like Google Tag Manager.
-- `_sass/_theme.scss` contains the custom site styles.
-- `assets/css/main.scss` compiles the theme stylesheet.
-- `index.html` contains only the landing page content and front matter.
-
-## Deployment
-
-GitHub Actions builds the Jekyll site and deploys `_site/` to Cloudflare Pages.
-Cloudflare Pages settings live in `wrangler.toml`.
-
-Required repository secrets:
-
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
+- Developer-tool companies
+- API-first SaaS
+- Auth / identity platforms
+- Cloud infrastructure companies
+- AI developer tools
+- B2B SaaS with complex onboarding
